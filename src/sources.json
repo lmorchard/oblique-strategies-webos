@@ -1,0 +1,11 @@
+[
+    {"source": "javascripts\/Decafbad\/Decafbad.js"},
+    {"source": "javascripts\/Decafbad\/Utils.js"},
+    {"source": "javascripts\/Decafbad\/Chain.js"},
+    {"source": "javascripts\/ObliqueStrategies\/ObliqueStrategies.js"},
+    {"source": "app\/assistants\/stage-assistant.js"},
+    {
+        "source": "app\/assistants\/home-assistant.js",
+        "scenes": "home"
+    }
+]
