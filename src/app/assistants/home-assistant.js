@@ -54,6 +54,12 @@ HomeAssistant.prototype = (function () { /** @lends HomeAssistant# */
          */
         activate: function (ev) {
             Decafbad.Utils.setupListeners([
+                ['strategy', Mojo.Event.tap, function () {
+                    this.showNewStrategy();
+                }],
+                [this.controller.document, 'shaking', function () {
+                    this.showNewStrategy();
+                }]
             ], this);
         },
 
@@ -68,7 +74,6 @@ HomeAssistant.prototype = (function () { /** @lends HomeAssistant# */
          * Handle ultimate card clean up.
          */
         cleanup: function (ev) {
-            Decafbad.Utils.clearListeners(this);
         },
 
         /**
@@ -77,26 +82,32 @@ HomeAssistant.prototype = (function () { /** @lends HomeAssistant# */
         handleCommand: function (event) {
             if (event.type === Mojo.Event.command) {
                 if ('MenuAbout' === event.command) {
-                    this.controller.showAlertDialog({
-                        onChoose: function(value) {},
-                        title: 
-                            $L("Oblique Strategies"),
-                        message: [
-                            "BRIAN ENO/PETER SCHMIDT;",
-                            "http://www.rtqe.net/ObliqueStrategies/;",
-                            "http://minimaldesign.net/downloads/projects/oblique-strategies;",
-                            "http://decafbad.com/"
-                        ].join('\n'),
-                        choices: [
-                            {label:$L("OK"), value:""}
-                        ]
-                    });
+                    this.showAbout();
                 } else if ('All' === event.command) {
                     return this.showNewStrategy();
                 } else if (parseInt(event.command, 10)) {
                     return this.showNewStrategy(event.command - 1);
                 }
             }
+        },
+
+        /**
+         * Show the about dialog.
+         */
+        showAbout: function () {
+            this.controller.showAlertDialog({
+                onChoose: function(value) {},
+                title: $L("Oblique Strategies"),
+                message: [
+                    "BRIAN ENO/PETER SCHMIDT;",
+                    "http://www.rtqe.net/ObliqueStrategies/;",
+                    "http://minimaldesign.net/downloads/projects/oblique-strategies;",
+                    "http://decafbad.com/"
+                ].join('\n'),
+                choices: [
+                    {label:$L("OK"), value:""}
+                ]
+            });
         },
 
         /**
