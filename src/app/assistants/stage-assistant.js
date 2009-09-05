@@ -4,7 +4,7 @@
  * @version 0.1
  */
 /*jslint laxbreak: true */
-/*global Decafbad, BlockChalk, Mojo, $, $L, $A, $H, SimpleDateFormat */
+/*global Decafbad, ObliqueStrategies, Mojo, $, $L, $A, $H, SimpleDateFormat */
 function StageAssistant() {
 }
 
