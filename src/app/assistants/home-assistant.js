@@ -116,10 +116,10 @@ HomeAssistant.prototype = (function () { /** @lends HomeAssistant# */
         showNewStrategy: function (edition_num) {
             var editions = ObliqueStrategies.strategies;
             if (!edition_num) {
-                edition_num = Math.round(Math.random() * [editions.length-1]);
+                edition_num = Math.floor(Math.random() * editions.length);
             }
             var edition  = editions[edition_num],
-                strategy = edition[Math.round(Math.random() * [edition.length-1])];
+                strategy = edition[Math.floor(Math.random() * edition.length)];
 
             this.controller.get('strategy').update(strategy);
         },
