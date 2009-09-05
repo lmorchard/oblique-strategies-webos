@@ -32,16 +32,16 @@ HomeAssistant.prototype = (function () { /** @lends HomeAssistant# */
             this.controller.setupWidget(
                 Mojo.Menu.commandMenu, {}, { items: [
                     {items: [ 
-                        { command:'1', label: '#1', shortcut: '1' },
-                        { command:'2', label: '#2', shortcut: '2' }
+                        /*{ command:'1', label: '#1', shortcut: '1' },
+                         { command:'2', label: '#2', shortcut: '2' }*/
                     ]},
                     {items: [ 
-                        { command:'All', label: $L('Refresh'), 
-                            icon: 'refresh', shortcut: 'A' }
+                        /*{ command:'All', label: $L('Refresh'), 
+                         icon: 'refresh', shortcut: 'A' }*/
                     ]},
                     {items: [ 
-                        { command:'3', label: '#3', shortcut: '3' },
-                        { command:'4', label: '#4', shortcut: '4' }
+                        /*{ command:'3', label: '#3', shortcut: '3' },
+                         { command:'4', label: '#4', shortcut: '4' }*/
                     ]}
                 ]}
             );

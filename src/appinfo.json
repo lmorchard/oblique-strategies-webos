@@ -1,8 +1,8 @@
 {
   "id":"com.decafbad.oblique-strategies",
-  "version":"0.0.1",
+  "version":"0.5.0",
   "title":"Oblique Strategies",
-  "vendor":"DECAFBAD",
+  "vendor":"0xDECAFBAD",
   "vendorurl":"http://decafbad.com/",
   "main":"index.html",
   "icon":"icon.png",
