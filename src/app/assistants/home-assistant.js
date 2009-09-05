@@ -86,7 +86,7 @@ HomeAssistant.prototype = (function () { /** @lends HomeAssistant# */
                             "http://www.rtqe.net/ObliqueStrategies/;",
                             "http://minimaldesign.net/downloads/projects/oblique-strategies;",
                             "http://decafbad.com/"
-                        ].join(' '),
+                        ].join('\n'),
                         choices: [
                             {label:$L("OK"), value:""}
                         ]
