@@ -104,6 +104,7 @@ HomeAssistant.prototype = (function () { /** @lends HomeAssistant# */
                     "Oblique Strategies © 1975, 1978, and 1979 BRIAN ENO/PETER SCHMIDT;",
                     "http://www.rtqe.net/ObliqueStrategies/;",
                     "http://minimaldesign.net/downloads/projects/oblique-strategies;",
+                    "http://github.com/lmorchard/oblique-strategies-webos;",
                     "http://decafbad.com/"
                 ].join('\n'),
                 choices: [
