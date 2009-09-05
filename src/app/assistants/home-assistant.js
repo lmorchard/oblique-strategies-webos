@@ -23,28 +23,30 @@ HomeAssistant.prototype = (function () { /** @lends HomeAssistant# */
                 {
                     visible: true,
                     items: [
-                        Mojo.Menu.editItem,
+                        //Mojo.Menu.editItem,
                         { label: "About", command: 'MenuAbout' }
                     ]
                 }
             );
 
+            /*
             this.controller.setupWidget(
                 Mojo.Menu.commandMenu, {}, { items: [
                     {items: [ 
-                        /*{ command:'1', label: '#1', shortcut: '1' },
-                         { command:'2', label: '#2', shortcut: '2' }*/
+                        { command:'1', label: '#1', shortcut: '1' },
+                        { command:'2', label: '#2', shortcut: '2' }
                     ]},
                     {items: [ 
-                        /*{ command:'All', label: $L('Refresh'), 
-                         icon: 'refresh', shortcut: 'A' }*/
+                        { command:'All', label: $L('Refresh'), 
+                            icon: 'refresh', shortcut: 'A' }
                     ]},
                     {items: [ 
-                        /*{ command:'3', label: '#3', shortcut: '3' },
-                         { command:'4', label: '#4', shortcut: '4' }*/
+                        { command:'3', label: '#3', shortcut: '3' },
+                        { command:'4', label: '#4', shortcut: '4' }
                     ]}
                 ]}
             );
+            */
 
             this.showNewStrategy();
         },
@@ -102,7 +104,6 @@ HomeAssistant.prototype = (function () { /** @lends HomeAssistant# */
                     "Oblique Strategies © 1975, 1978, and 1979 BRIAN ENO/PETER SCHMIDT;",
                     "http://www.rtqe.net/ObliqueStrategies/;",
                     "http://minimaldesign.net/downloads/projects/oblique-strategies;",
-                    "http://www.flickr.com/photos/ario/2358566811/;",
                     "http://decafbad.com/"
                 ].join('\n'),
                 choices: [
@@ -121,6 +122,13 @@ HomeAssistant.prototype = (function () { /** @lends HomeAssistant# */
             }
             var edition  = editions[edition_num],
                 strategy = edition[Math.floor(Math.random() * edition.length)];
+
+            // HACK: I'm lazy and don't want to edit all the card text yet.
+            if (strategy.indexOf('<ul>') !== -1) {
+                strategy = '<div class="with-list">' + strategy + '</div>';
+            } else {
+                strategy = '<p>' + strategy + '</p>';
+            }
 
             this.controller.get('strategy').update(strategy);
         },
