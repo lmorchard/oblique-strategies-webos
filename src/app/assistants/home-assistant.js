@@ -99,9 +99,10 @@ HomeAssistant.prototype = (function () { /** @lends HomeAssistant# */
                 onChoose: function(value) {},
                 title: $L("Oblique Strategies"),
                 message: [
-                    "BRIAN ENO/PETER SCHMIDT;",
+                    "Oblique Strategies © 1975, 1978, and 1979 BRIAN ENO/PETER SCHMIDT;",
                     "http://www.rtqe.net/ObliqueStrategies/;",
                     "http://minimaldesign.net/downloads/projects/oblique-strategies;",
+                    "http://www.flickr.com/photos/ario/2358566811/;",
                     "http://decafbad.com/"
                 ].join('\n'),
                 choices: [

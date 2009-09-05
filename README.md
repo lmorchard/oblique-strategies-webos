@@ -14,6 +14,10 @@ This webOS application uses data from a PHP web-based application:
 
 * http://minimaldesign.net/downloads/projects/oblique-strategies
 
+The icon is based on this photo from Flickr:
+
+* http://www.flickr.com/photos/ario/2358566811/
+
 You can find the source code for this application here:
 
 * http://github.com/lmorchard/oblique-strategies-webos
